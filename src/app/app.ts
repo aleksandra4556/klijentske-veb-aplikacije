@@ -1,15 +1,21 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { RouterOutlet, RouterLinkWithHref } from '@angular/router';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [
+    RouterOutlet,
+    RouterLinkWithHref,
+    MatButtonModule,
+    MatMenuModule,
+    MatToolbarModule
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('klijentske-veb-aplikacije');
-  ime = 'Aleksandra'
-  prezime= 'Stjepanovic'
-  indeks= '2023204117'
+
 }
